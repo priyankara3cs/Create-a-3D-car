@@ -6,7 +6,7 @@ export function Rings() {
   const itemsRef = useRef([]);
 
   useFrame((state) => {
-    let elapsed = state.clock.getElapsedTime() * 1;
+    let elapsed = state.clock.getElapsedTime() * 5;
 
     for (let i = 0; i < itemsRef.current.length; i++) {
       let mesh = itemsRef.current[i];

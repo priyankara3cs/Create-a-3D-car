@@ -28,7 +28,7 @@ function Box({ color }) {
 
   useFrame(
     (state, delta) => {
-      time.current += delta * 1.2;
+      time.current += delta * 5;
       let newZ = position.z - (time.current);
 
       if(newZ < -10) {
@@ -50,7 +50,7 @@ function Box({ color }) {
   return (
     <mesh
       ref={box}
-      rotation-x={Math.PI * 0.5}
+      rotation-x={Math.PI * 0.9}
       scale={scale}
       castShadow
     >

@@ -22,7 +22,7 @@ export function Ground() {
   }, [normal, roughness]);
 
   useFrame((state, delta) => {
-    let t = -state.clock.getElapsedTime() * 0.128;
+    let t = -state.clock.getElapsedTime() * 5;
     roughness.offset.set(0, t % 1);
     normal.offset.set(0, t % 1);
   });

@@ -22,7 +22,7 @@ export function Car() {
   }, [gltf]);
 
   useFrame((state, delta) => {
-    let t = state.clock.getElapsedTime();
+    let t = state.clock.getElapsedTime() * 7;
 
     let group = gltf.scene.children[0].children[0].children[0];
     group.children[0].rotation.x = t * 2;
