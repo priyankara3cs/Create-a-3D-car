@@ -12,6 +12,8 @@ import {
   OrbitControls,
   PerspectiveCamera,
 } from "@react-three/drei";
+import { useSound } from 'use-sound';
+import soundtrack from './sounds/song.mp3';
 import "./style.css";
 import { Boxes } from "./Boxes";
 import { Car } from "./Car";
@@ -20,6 +22,13 @@ import { FloatingGrid } from "./FloatingGrid";
 import { Rings } from "./Rings";
 
 function CarShow() {
+  const [play, { stop }] = useSound(soundtrack, { volume: 0.6, loop: true });
+
+  React.useEffect(() => {
+    play();
+    return () => stop();
+  }, [play, stop]);
+
   return (
     <>
       <OrbitControls 
