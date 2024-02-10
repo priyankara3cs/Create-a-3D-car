@@ -28,7 +28,7 @@ function Sphere({ color }) {
 
   useFrame(
     (state, delta) => {
-      time.current += delta * 5;
+      time.current += delta * 6;
       let newZ = position.z - time.current;
 
       if (newZ < -10) {
