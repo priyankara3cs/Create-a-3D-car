@@ -15,7 +15,7 @@ import {
 import { useSound } from 'use-sound';
 import soundtrack from './sounds/song.mp3';
 import "./style.css";
-import { Boxes } from "./Boxes";
+import { Spheres } from "./Spheres";
 import { Car } from "./Car";
 import { Ground } from "./Ground";
 import { FloatingGrid } from "./FloatingGrid";
@@ -70,7 +70,7 @@ function CarShow() {
       <Ground />
       <FloatingGrid />
       <Rings />
-      <Boxes />
+      <Spheres />
 
       <EffectComposer>
         {/* <DepthOfField focusDistance={0.0035} focalLength={0.01} bokehScale={3} height={480} /> */}
