@@ -15,6 +15,7 @@ import {
 import { useSound } from 'use-sound';
 import soundtrack from './sounds/song.mp3';
 import "./style.css";
+// import { Boxes } from "./Boxes";
 import { Spheres } from "./Spheres";
 import { Car } from "./Car";
 import { Ground } from "./Ground";
@@ -70,6 +71,7 @@ function CarShow() {
       <Ground />
       <FloatingGrid />
       <Rings />
+      {/* <Boxes /> */}
       <Spheres />
 
       <EffectComposer>

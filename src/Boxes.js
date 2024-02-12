@@ -2,8 +2,8 @@ import React, { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Vector3 } from "three";
 
-function Sphere({ color }) {
-  const sphere = useRef();
+function Box({ color }) {
+  const box = useRef();
   const time = useRef(0);
   const [position, setPosition] = useState(getInitialPosition());
   const [xRotSpeed] = useState(() => Math.random());
@@ -36,31 +36,31 @@ function Sphere({ color }) {
         time.current = 0;
       }
 
-      sphere.current.position.set(
+      box.current.position.set(
         position.x, 
         position.y, 
         newZ, 
       )
-      sphere.current.rotation.x += delta * xRotSpeed;
-      sphere.current.rotation.y += delta * yRotSpeed;
+      box.current.rotation.x += delta * xRotSpeed;
+      box.current.rotation.y += delta * yRotSpeed;
     },
     [xRotSpeed, yRotSpeed, position]
   );
 
   return (
     <mesh
-      ref={sphere}
+      ref={box}
       rotation-x={Math.PI * 0.9}
       scale={scale}
       castShadow
     >
-      <sphereGeometry args={[1, 30, 16]} />
+      <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color={color} envMapIntensity={1} />
     </mesh>
   );
 }
 
-export function Spheres() {
+export function Boxes() {
   const [arr] = useState(() => {
     let a = [];
     for(let i = 0; i < 100; i++) a.push(0);
@@ -68,6 +68,6 @@ export function Spheres() {
   });
 
   return <>
-    {arr.map((e, i) => <Sphere key={i} color={i % 2 === 0 ? [0.4, 0.1, 0.1] : [0.05, 0.15, 0.4] }/>)}
+    {arr.map((e, i) => <Box key={i} color={i % 2 === 0 ? [0.4, 0.1, 0.1] : [0.05, 0.15, 0.4] }/>)}
   </>
 }
