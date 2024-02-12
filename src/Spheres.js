@@ -54,7 +54,7 @@ function Sphere({ color }) {
       scale={scale}
       castShadow
     >
-      <sphereGeometry args={[1, 30, 16]} />
+      <sphereGeometry args={[1, 32, 16]} />
       <meshStandardMaterial color={color} envMapIntensity={1} />
     </mesh>
   );
