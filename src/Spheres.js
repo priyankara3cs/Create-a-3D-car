@@ -63,7 +63,7 @@ function Sphere({ color }) {
 export function Spheres() {
   const [arr] = useState(() => {
     let a = [];
-    for(let i = 0; i < 100; i++) a.push(0);
+    for(let i = 0; i < 50; i++) a.push(0);
     return a;
   });
 
