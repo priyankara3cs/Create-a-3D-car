@@ -1,15 +1,16 @@
 # Create a 3D car
-React Three
+
+- React Three
 
 ## Server Links
 
-### Live
+### vercel
 
-- -
+- https://create-a-3-d-car.vercel.app/
 
-### Staging
+---
 
-- https://3cs-react-2024-staging.3cs.website/ 
+## Run react in development mode
 
 ### npm install
 
@@ -32,12 +33,14 @@ Build the application for production:
 ```bash
 # npm
 npm run build
+``` -->un build
 ```
 
 
-<!-- 
-1. npx create-react-app my-threejs-app --template minimal
-2. cd my-threejs-app
+
+<!--  
+1. npx create-react-app create-a-3d-car --template minimal
+2. cd create-a-3d-car
 3. npm install three @react-three/fiber @react-three/drei @react-three/postprocessing
 4. npm start
- -->
+-->
