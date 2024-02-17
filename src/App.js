@@ -13,7 +13,7 @@ import {
   PerspectiveCamera,
 } from "@react-three/drei";
 import { useSound } from 'use-sound';
-import soundtrack from './sounds/song.mp3';
+import soundtrack from './assets/sounds/song.mp3';
 import "./style.css";
 // import { Boxes } from "./Boxes";
 import { Spheres } from "./Spheres";
